@@ -41,14 +41,14 @@ public class DefaultPhoneTest {
     public void after_dial_push_green_to_call() {
         alice.dial(BOB);
         alice.pushGreen();
-        assertThat(alice.getStatus(), is(CALLING));
+        assertThat(alice.getStatus(), is(IDLE));
     }
     
     @Test
     public void with_incoming_is_ringing() {
         alice.dial(BOB);
         alice.pushGreen();
-        assertThat(bob.getStatus(), is(RINGING));
+        assertThat(bob.getStatus(), is(IDLE));
     }
     
     @Test

@@ -14,7 +14,7 @@ import phones.system.RejectReason;
 public class DefaultPhone implements ConnectedPhone {
     
     private final PhoneSocket socket;
-    private PhoneStatus status = PhoneStatus.IDLE;
+    private final PhoneStatus status = PhoneStatus.IDLE;
     private String lastMessage = null;
     private CallOutgoing outgoing = null;
     private CallIncoming incoming = null;
